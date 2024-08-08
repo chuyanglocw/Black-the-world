@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1gc4ka0d0vs0"]
+
+[ext_resource type="Texture2D" uid="uid://erlycwlpkb0a" path="res://sprites/black_wy.png" id="1_eh2es"]
+[ext_resource type="Script" path="res://sprites/wuya.gd" id="2_6k468"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fih5f"]
+atlas = ExtResource("1_eh2es")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eurat"]
+atlas = ExtResource("1_eh2es")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ef2k1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fih5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eurat")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="wuya" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ef2k1")
+autoplay = "default"
+frame_progress = 0.173911
+script = ExtResource("2_6k468")

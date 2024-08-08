@@ -1,0 +1,5 @@
+res://scenes/games.tscn
+res://scenes/wuya.tscn
+res://sprites/wuya.gd
+res://scenes/player.tscn
+res://sprites/player.gd
