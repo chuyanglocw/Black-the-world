@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1gc4ka0d0vs0"]
+[gd_scene load_steps=7 format=3 uid="uid://d1gc4ka0d0vs0"]
 
 [ext_resource type="Texture2D" uid="uid://erlycwlpkb0a" path="res://sprites/black_wy.png" id="1_eh2es"]
-[ext_resource type="Script" path="res://sprites/wuya.gd" id="2_6k468"]
+[ext_resource type="Script" path="res://gdscripts/wuya.gd" id="2_6k468"]
+[ext_resource type="PackedScene" uid="uid://cyh875l12pcj3" path="res://scenes/tree.tscn" id="3_l8144"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fih5f"]
 atlas = ExtResource("1_eh2es")
@@ -26,8 +27,10 @@ animations = [{
 }]
 
 [node name="wuya" type="AnimatedSprite2D"]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ef2k1")
 autoplay = "default"
-frame_progress = 0.173911
+frame_progress = 0.640443
 script = ExtResource("2_6k468")
+
+[node name="tree" parent="." instance=ExtResource("3_l8144")]
+position = Vector2(619, 361)

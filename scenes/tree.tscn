@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyh875l12pcj3"]
+
+[ext_resource type="Texture2D" uid="uid://cecscbqefh7c5" path="res://sprites/black_all.png" id="1_31huj"]
+
+[node name="tree" type="Sprite2D"]
+texture = ExtResource("1_31huj")
+region_enabled = true
+region_rect = Rect2(484, 763, 63, 104)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcne3knwklemo"]
+
+[ext_resource type="Script" path="res://gdscripts/dath_area.gd" id="1_pwgbh"]
+
+[node name="dathArea" type="Area2D"]
+script = ExtResource("1_pwgbh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

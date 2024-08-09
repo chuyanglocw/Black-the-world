@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var speed = 300.0
+var speed = 50.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var torch: PointLight2D = $torch
+@onready var torch: Sprite2D= $torch
 
 var toward = 1
 var look_to = 1

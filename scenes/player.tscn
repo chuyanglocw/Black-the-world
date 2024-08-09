@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsio3ok21v4cb"]
+[gd_scene load_steps=14 format=3 uid="uid://dsio3ok21v4cb"]
 
-[ext_resource type="Script" path="res://sprites/player.gd" id="1_nmeg7"]
+[ext_resource type="Script" path="res://gdscripts/player.gd" id="1_nmeg7"]
 [ext_resource type="Texture2D" uid="uid://d1up6ukqgkp5t" path="res://sprites/black_player.png" id="1_uttwf"]
+[ext_resource type="Texture2D" uid="uid://kdh4f6chm2pc" path="res://sprites/PointLight.png" id="3_0we3k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7o3th"]
 atlas = ExtResource("1_uttwf")
@@ -85,15 +86,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t52ri"]
 size = Vector2(18, 23)
 
-[sub_resource type="Gradient" id="Gradient_jcffb"]
-colors = PackedColorArray(1, 0.538347, 0.253958, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_hgwf2"]
-gradient = SubResource("Gradient_jcffb")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_nmeg7")
 
@@ -105,18 +97,8 @@ autoplay = "default_right"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t52ri")
 
-[node name="torch" type="PointLight2D" parent="."]
-position = Vector2(-4, -16)
-scale = Vector2(4, 4)
-color = Color(1, 0.8555, 0.49, 1)
-texture = SubResource("GradientTexture2D_hgwf2")
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="PointLight2D2" type="PointLight2D" parent="torch"]
-position = Vector2(-3.8147e-06, 0)
-scale = Vector2(0.703125, 0.671875)
-texture = SubResource("GradientTexture2D_hgwf2")
-
-[node name="PointLight2D" type="PointLight2D" parent="torch/PointLight2D2"]
-position = Vector2(2.84445, 2.21785e-07)
-scale = Vector2(0.695833, 0.703488)
-texture = SubResource("GradientTexture2D_hgwf2")
+[node name="torch" type="Sprite2D" parent="."]
+position = Vector2(4, -17)
+texture = ExtResource("3_0we3k")
